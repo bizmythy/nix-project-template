@@ -21,7 +21,10 @@
       in
       {
         devShells.default = pkgs.mkShell {
-          buildInputs = [ ]; # add pkgs here
+          buildInputs = with pkgs; [
+            nushell
+            # add pkgs here
+          ];
         };
 
         formatter = treefmtEval.config.build.wrapper;
