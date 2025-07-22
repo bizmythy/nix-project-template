@@ -21,7 +21,7 @@ if ($staged_files | is-empty) {
 # Format the staged files using prettier
 print "running nix fmt..."
 try {
-    nix fmt
+    nix fmt ...$staged_files
 } catch {
     print $"(ansi red)error: nix fmt formatting failed.(ansi reset)"
     exit 1
