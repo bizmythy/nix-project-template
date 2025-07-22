@@ -22,8 +22,10 @@
       {
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
+            (aspellWithDicts (ps: with ps; [ en ]))
+            # keep-sorted start
             nushell
-            # add pkgs here
+            # keep-sorted end
           ];
         };
 
