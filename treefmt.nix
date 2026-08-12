@@ -14,8 +14,7 @@
     toml-sort.enable = true;
     dos2unix.enable = true;
     keep-sorted.enable = true;
-    # buggy as of right now
-    # nufmt.enable = true;
+    topiary-nushell.enable = true;
   };
 
   settings = {
