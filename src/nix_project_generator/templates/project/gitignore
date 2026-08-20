@@ -1,0 +1,14 @@
+# direnv
+.direnv
+{% if rust %}
+# Rust
+target/
+{% endif %}{% if python %}
+# Python
+__pycache__/
+.ruff_cache/
+.venv/
+{% endif %}{% if typescript %}
+# TypeScript
+node_modules/
+{% endif %}

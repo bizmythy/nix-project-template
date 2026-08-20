@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nix-project-generator"
+version = "0.1.0"
+description = "Generate opinionated, language-aware Nix project repositories"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+  "click>=8.2",
+  "jinja2>=3.1",
+  "nix-manipulator>=0.1.2",
+]
+
+[project.scripts]
+new-repo = "nix_project_generator.cli:main"
+
+[tool.setuptools.package-data]
+nix_project_generator = ["templates/**/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 79

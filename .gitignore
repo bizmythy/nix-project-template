@@ -1,2 +1,14 @@
-# direnv
-.direnv
+# Python
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Nix
+.direnv/
+result
+
+# Virtual environments
+.venv/

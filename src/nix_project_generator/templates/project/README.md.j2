@@ -1,0 +1,12 @@
+# {{ name }}
+
+This project uses Nix and direnv for a reproducible development environment.
+{% if languages %}
+Configured languages: {{ languages | join(", ") }}.
+{% endif %}
+Run `direnv allow` to activate the development shell and `nix fmt` to format the repository.
+{% if licensed %}
+## License
+
+Licensed under either of Apache License, Version 2.0 or MIT license at your option.
+{% endif %}
